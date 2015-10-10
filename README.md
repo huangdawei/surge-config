@@ -10,10 +10,12 @@ Check the `build/[currentTime]` folder
 
 Surge will mark this configuration file as protected, which prevents users from viewing or editing the configuration file. This is useful when you share your own proxy server with others.
 
-## Config
+## Custom
 
-- `proxies.js`: .conf files to be generated and common proxies in the config files
-- `rules.js`: rules
+Do not edit `proxies.js` & `rules.js`, create your own `proxies.custom.js` & `rules.custom.js`.
+
+- `proxies[.custom].js`: .conf files to be generated and common proxies in the config files
+- `rules[.custom].js`: rules
 
 ## Custom Modules
 
