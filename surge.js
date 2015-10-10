@@ -90,14 +90,14 @@ function stringifyProxy(proxy) {
     data += proxy.port ? ',' + proxy.port : '';
 
     if (type === 'custom') {
-      data += proxy.chiper ? ',' + proxy.chiper : '';
+      data += proxy.cipher ? ',' + proxy.cipher : '';
     }
 
     data += proxy.username ? ',' + proxy.username : '';
     data += proxy.password ? ',' + proxy.password : '';
 
     if (type === 'https') {
-      data += proxy.chiper ? ',' + proxy.chiper : '';
+      data += proxy.cipher ? ',' + proxy.cipher : '';
     }
 
     if (type === 'custom') {
