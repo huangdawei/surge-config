@@ -17,7 +17,7 @@ let _files;
 let _subProxies;
 let _rules;
 
-fs.stat('build/', function(err, stats) {
+fs.stat('./proxies.custom.js', function(err, stats) {
   if(!err) {
     _files      = require('./proxies.custom.js').files;
     _subProxies = require('./proxies.custom.js').subProxies;
