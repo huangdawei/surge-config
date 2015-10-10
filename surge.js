@@ -143,7 +143,7 @@ function stringifyTime(newDate) {
 
   let year   = newDate.getFullYear();
   let month  = (newDate.getMonth() + 1);
-  let day    = newDate.getDay();
+  let day    = newDate.getDate();
   let hour   = newDate.getHours();
   let minute = newDate.getMinutes();
   let second = newDate.getSeconds();
