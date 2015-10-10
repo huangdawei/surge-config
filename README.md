@@ -19,3 +19,7 @@ Surge will mark this configuration file as protected, which prevents users from 
 ## Custom Modules
 
 Surge supports custom proxy modules, such as Shadowsocks.
+
+## Screenshot
+
+[Screenshot Of Surge Configs](http://d.pr/i/11qVY)
