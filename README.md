@@ -1,12 +1,14 @@
+Ruqires Node.js v4.0.0+
+
 ## Usage
 
-`npm run build`
+`node surge.js`
 
 Check the `build/[currentTime]` folder
 
 ## Protected Configuration
 
-`npm run build -- --protect`
+`node surge.js --protect`
 
 Surge will mark this configuration file as protected, which prevents users from viewing or editing the configuration file. This is useful when you share your own proxy server with others.
 
