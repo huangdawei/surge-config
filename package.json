@@ -1,0 +1,22 @@
+{
+  "name": "surge-config",
+  "version": "0.0.1",
+  "description": "Config Generator for Surge http://surge.run",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangdawei/surge-config"
+  },
+  "main": "surge.js",
+  "scripts": {
+    "build": "node surge.js"
+  },
+  "keywords": [
+    "surge",
+    "network",
+    "ios"
+  ],
+  "author": "David Wong",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
