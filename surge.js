@@ -143,14 +143,14 @@ function stringifyTime(newDate) {
 
   let year   = newDate.getFullYear();
   let month  = (newDate.getMonth() + 1);
-  let day    = newDate.getDate();
+  let date   = newDate.getDate();
   let hour   = newDate.getHours();
   let minute = newDate.getMinutes();
   let second = newDate.getSeconds();
 
   now += year;
   now += (month < 10) ? ('0' + month) : month;
-  now += (day < 10) ? ('0' + day) : day;
+  now += (date < 10) ? ('0' + date) : date;
   now += (hour < 10) ? ('0' + hour) : hour;
   now += (minute < 10) ? ('0' + minute) : minute;
   now += (second < 10) ? ('0' + second) : second;
