@@ -2,11 +2,8 @@
  * Config generator for Surge
  */
 "use strict";
-const fs = require('fs');
-const configs = require('./configs.js');
-const FILES = configs.FILES;
-const SUB_PROXIES = configs.SUB_PROXIES;
-const RULES = require('./rules.js').RULES;
+let fs = require('fs');
+
 const REQUIRE_PROTECTED = false;
 const PROXY_TYPES = ['socks5', 'http', 'https', 'custom'];
 
@@ -16,19 +13,42 @@ let i, j, k;
 let now;
 let config;
 
-fs.mkdir('build/', () => {
-  let newDate = new Date();
+let _files;
+let _subProxies;
+let _rules;
 
-  stringifyTime(newDate);
+fs.stat('build/', function(err, stats) {
+  if(!err) {
+    _files      = require('./proxies.custom.js').files;
+    _subProxies = require('./proxies.custom.js').subProxies;
+  } else {
+    _files      = require('./proxies.js').files;
+    _subProxies = require('./proxies.js').subProxies;
+  }
 
-  fs.mkdir('build/' + now, () => {
-    generatorConfigs();
+  fs.access('./rules.custom.js', fs.R_OK, function(err) {
+    if(!err) {
+      _rules = require('./rules.custom.js').rules;
+    } else {
+      _rules = require('./rules.js').rules;
+    }
+
+    fs.mkdir('build/', () => {
+      let newDate = new Date();
+
+      stringifyTime(newDate);
+
+      fs.mkdir('build/' + now, () => {
+        generatorConfigs();
+      });
+    });
+
   });
 });
 
 function generatorConfigs() {
-  for (i=0; i<FILES.length; i++) {
-    config = FILES[i];
+  for (i=0; i<_files.length; i++) {
+    config = _files[i];
 
     data = protect;
 
@@ -44,8 +64,8 @@ function generatorConfigs() {
     data += stringifyProxy(config.proxy);
     data += '\n';
 
-    for (j=0; j<SUB_PROXIES.length; j++) {
-      data += stringifyProxy(SUB_PROXIES[j]);
+    for (j=0; j<_subProxies.length; j++) {
+      data += stringifyProxy(_subProxies[j]);
       data += '\n';
     }
 
@@ -53,17 +73,17 @@ function generatorConfigs() {
     data += '[Rule]';
     data += '\n';
 
-    for (k=0; k<RULES.length; k++) {
-      if (config.global && RULES[k].type === 'direct') {
+    for (k=0; k<_rules.length; k++) {
+      if (config.global && _rules[k].type === 'direct') {
         continue;
       }
-      if (RULES[k].desc) {
+      if (_rules[k].desc) {
         data += '# ';
-        data += RULES[k].desc;
+        data += _rules[k].desc;
         data += '\n';
       }
-      data += stringifyRules(RULES[k].rules);
-      if (k < RULES.length-1) {
+      data += stringifyRules(_rules[k].rules);
+      if (k < _rules.length-1) {
         data += '\n';
       }
     }

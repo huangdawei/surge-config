@@ -5,7 +5,7 @@ module.exports = {
    * [desc](string) comment
    * rules(array) rules
    */
-  RULES: [
+  rules: [
     {
       type: 'direct',
       desc: 'Bypass the most visited site in China',

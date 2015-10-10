@@ -12,8 +12,7 @@ Surge will mark this configuration file as protected, which prevents users from 
 
 ## Config
 
-- `surge.js`: the entry
-- `configs.js`: .conf files to be generated and common sub-proxies in the config files
+- `proxies.js`: .conf files to be generated and common proxies in the config files
 - `rules.js`: rules
 
 ## Custom Modules

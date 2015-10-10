@@ -7,7 +7,7 @@ module.exports = {
    * - proxy (json) the DEFAULT proxy in the config file
    * - [proxy.cipher] (string) only for HTTPS & Shadowsocks mode
    */
-  FILES: [
+  files: [
     {
       name: 'SOCKS5-HK',
       loglevel: 'notify',
@@ -63,7 +63,7 @@ module.exports = {
     }
   ],
 
-  SUB_PROXIES: [
+  subPorxies: [
     {
       name: 'JP',
       type: 'https',
