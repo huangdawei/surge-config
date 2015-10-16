@@ -58,7 +58,8 @@ module.exports = {
         port: 443,
         cipher: 'rc4-md5',
         password: 'password',
-        module: 'http://surge.run/SSEncrypt.module'
+        module: 'http://surge.run/SSEncrypt.module',
+        tcpFastOpen: false
       }
     }
   ],

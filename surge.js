@@ -117,11 +117,12 @@ function stringifyProxy(proxy) {
     data += proxy.password ? ',' + proxy.password : '';
 
     if (type === 'https') {
-      data += proxy.cipher ? ',' + proxy.cipher : '';
+      data += proxy.cipher ? ',cipher=' + proxy.cipher : '';
     }
 
     if (type === 'custom') {
       data += proxy.module ? ',' + proxy.module : '';
+      data += proxy.tcpFastOpen? ',tcp-fast-open=true' : '';
     }
 
     return data;
