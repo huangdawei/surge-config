@@ -58,6 +58,44 @@ function generatorConfigs() {
     data += config.loglevel ? config.loglevel : 'notify';
     data += '\n';
 
+    if (config.bypassSystem === false) {
+      data += 'bypass-system=false';
+      data += '\n';
+    }
+
+    if (config.skipProxy && config.skipProxy.length) {
+      data += 'skip-proxy=';
+      for (j=0; j<config.skipProxy.length; j++) {
+        data += config.skipProxy[j];
+        if (j < config.skipProxy.length-1) {
+          data += ', ';
+        }
+      }
+      data += '\n';
+    }
+
+    if (config.bypassTun && config.bypassTun.length) {
+      data += 'bypass-tun=';
+      for (j=0; j<config.bypassTun.length; j++) {
+        data += config.bypassTun[j];
+        if (j < config.bypassTun.length-1) {
+          data += ', ';
+        }
+      }
+      data += '\n';
+    }
+
+    if (config.dnsServer && config.dnsServer.length) {
+      data += 'dns-server=';
+      for (j=0; j<config.dnsServer.length; j++) {
+        data += config.dnsServer[j];
+        if (j < config.dnsServer.length-1) {
+          data += ', ';
+        }
+      }
+      data += '\n';
+    }
+
     data += '\n';
     data += '[Proxy]';
     data += '\n';
