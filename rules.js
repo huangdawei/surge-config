@@ -152,7 +152,7 @@ module.exports = {
     {
       desc: 'Force remote DNS',
       rules: [
-        'DOMAIN-KEYWORD,google,US,force-remote-dns',
+        'DOMAIN-KEYWORD,google,DEFAULT,force-remote-dns',
         'DOMAIN-KEYWORD,facebook,DEFAULT,force-remote-dns',
         'DOMAIN-KEYWORD,youtube,DEFAULT,force-remote-dns',
         'DOMAIN-KEYWORD,twitter,DEFAULT,force-remote-dns',
