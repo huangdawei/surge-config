@@ -18,6 +18,7 @@ module.exports = {
         'DOMAIN-SUFFIX,adsage.cn,REJECT',
         'DOMAIN-SUFFIX,adsage.com,REJECT',
         'DOMAIN-SUFFIX,adsmogo.org,REJECT',
+        'DOMAIN-KEYWORD,adsmogo,REJECT',
         'DOMAIN-SUFFIX,ads.mobclix.com,REJECT',
         'DOMAIN-SUFFIX,adview.cn,REJECT',
         'DOMAIN-SUFFIX,adwhirl.com,REJECT',
@@ -54,6 +55,10 @@ module.exports = {
       type: 'direct',
       desc: 'Bypass the most visited site in China',
       rules: [
+        // iOS
+        'DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT',
+        'DOMAIN-SUFFIX,ls.apple.com,DIRECT',
+        // CN
         'DOMAIN-SUFFIX,cn,DIRECT',
         'DOMAIN-SUFFIX,126.com,DIRECT',
         'DOMAIN-SUFFIX,163.com,DIRECT',
@@ -121,7 +126,6 @@ module.exports = {
     {
       desc: 'Split the region required services',
       rules: [
-        'DOMAIN-SUFFIX,linode.com,JP',
         'DOMAIN-SUFFIX,pandora.com,US'
       ]
     },
@@ -133,6 +137,8 @@ module.exports = {
         '# DOMAIN-SUFFIX,swcdn.apple.com,DIRECT',
         '# DOMAIN-SUFFIX,phobos.apple.com,DIRECT',
         'DOMAIN-SUFFIX,apple.com,DEFAULT',
+        'DOMAIN-SUFFIX,aaplimg.com,DEFAULT',
+        'DOMAIN-SUFFIX,cdn-apple.com,DEFAULT',
         'DOMAIN-SUFFIX,icloud.com,DEFAULT',
         'DOMAIN-SUFFIX,itunes.com,DEFAULT',
         'DOMAIN-SUFFIX,me.com,DEFAULT',
@@ -276,9 +282,10 @@ module.exports = {
     {
       desc: 'LAN',
       rules: [
-        'IP-CIDR,192.168.0.0/16,DIRECT,no-resolve',
         'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve',
-        'IP-CIDR,172.16.0.0/12,DIRECT,no-resolve'
+        'IP-CIDR,127.0.0.0/8,DIRECT',
+        'IP-CIDR,172.16.0.0/12,DIRECT,no-resolve',
+        'IP-CIDR,192.168.0.0/16,DIRECT,no-resolve'
       ]
     },
     {
