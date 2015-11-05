@@ -1,4 +1,4 @@
-Ruqires Node.js v4.0.0+, Surge for iOS Build 260+
+Ruqires Node.js v4.0.0+, Surge for iOS Build 294+
 
 ## Usage
 
