@@ -245,7 +245,7 @@ module.exports = {
         port: 443,
         cipher: 'rc4-md5',
         password: 'password',
-        module: 'http://d.pr/f/vBzK/3RX59AVy+',
+        module: 'https://ealoop.gfw.io:3443/SSEncrypt.module',
         tcpFastOpen: false
       }
     }
