@@ -62,6 +62,7 @@ module.exports = {
         'DOMAIN-SUFFIX,cn,DIRECT',
         'DOMAIN-SUFFIX,126.com,DIRECT',
         'DOMAIN-SUFFIX,163.com,DIRECT',
+        'DOMAIN-SUFFIX,2q10.com,DIRECT',
         'DOMAIN-SUFFIX,56.com,DIRECT',
         'DOMAIN-SUFFIX,58.com,DIRECT',
         'DOMAIN-SUFFIX,acfun.tv,DIRECT',
