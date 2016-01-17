@@ -58,8 +58,15 @@ module.exports = {
         // iOS
         'DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT',
         'DOMAIN-SUFFIX,ls.apple.com,DIRECT',
+
         // CN
         'DOMAIN-SUFFIX,cn,DIRECT',
+
+        'DOMAIN-KEYWORD,360buy,DIRECT',
+        'DOMAIN-KEYWORD,alipay,DIRECT',
+        'DOMAIN-KEYWORD,baidu,DIRECT',
+        'DOMAIN-KEYWORD,taobao,DIRECT',
+
         'DOMAIN-SUFFIX,126.com,DIRECT',
         'DOMAIN-SUFFIX,163.com,DIRECT',
         'DOMAIN-SUFFIX,2q10.com,DIRECT',
@@ -89,14 +96,16 @@ module.exports = {
         'DOMAIN-SUFFIX,gtimg.com,DIRECT',
         'DOMAIN-SUFFIX,id1.cn,DIRECT',
         'DOMAIN-SUFFIX,iqiyi.com,DIRECT',
-        'DOMAIN-SUFFIX,meituan.com,DIRECT',
-        'DOMAIN-SUFFIX,netease.com,DIRECT',
-        'DOMAIN-SUFFIX,nuomi.com,DIRECT',
         'DOMAIN-SUFFIX,jd.com,DIRECT',
         'DOMAIN-SUFFIX,jumei.com,DIRECT',
         'DOMAIN-SUFFIX,kankan.com,DIRECT',
         'DOMAIN-SUFFIX,letv.com,DIRECT',
+        'DOMAIN-SUFFIX,meituan.com,DIRECT',
+        'DOMAIN-SUFFIX,miwifi.com,DIRECT',
+        'DOMAIN-SUFFIX,netease.com,DIRECT',
+        'DOMAIN-SUFFIX,nuomi.com,DIRECT',
         'DOMAIN-SUFFIX,pptv.com,DIRECT',
+        'DOMAIN-SUFFIX,qhimg.com,DIRECT',
         'DOMAIN-SUFFIX,qq.com,DIRECT',
         'DOMAIN-SUFFIX,qunar.com,DIRECT',
         'DOMAIN-SUFFIX,sina.com,DIRECT',
@@ -114,12 +123,12 @@ module.exports = {
         'DOMAIN-SUFFIX,tudou.com,DIRECT',
         'DOMAIN-SUFFIX,weibo.com,DIRECT',
         'DOMAIN-SUFFIX,weixin.com,DIRECT',
-        'DOMAIN-SUFFIX,vip.com,DIRECT',
         'DOMAIN-SUFFIX,youku.com,DIRECT',
         'DOMAIN-SUFFIX,xiaomi.com,DIRECT',
         'DOMAIN-SUFFIX,xici.net,DIRECT',
         'DOMAIN-SUFFIX,xunlei.com,DIRECT',
         'DOMAIN-SUFFIX,zhihu.com,DIRECT',
+        'DOMAIN-SUFFIX,zimuzu.tv,DIRECT',
         'DOMAIN-SUFFIX,zqt.pw,DIRECT',
         'DOMAIN-SUFFIX,zuiqt.com,DIRECT'
       ]
@@ -166,7 +175,8 @@ module.exports = {
         'DOMAIN-KEYWORD,instagram,DEFAULT,force-remote-dns',
         'DOMAIN-KEYWORD,gmail,DEFAULT,force-remote-dns',
         'DOMAIN-KEYWORD,blogspot,DEFAULT,force-remote-dns',
-        'DOMAIN-SUFFIX,twimg.com,DEFAULT,force-remote-dns'
+        'DOMAIN-SUFFIX,twimg.com,DEFAULT,force-remote-dns',
+        'DOMAIN-SUFFIX,t.co,DEFAULT,force-remote-dns'
       ]
     },
     {
