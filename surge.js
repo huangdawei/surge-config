@@ -9,13 +9,14 @@ const PROXY_TYPES = ['socks5', 'http', 'https', 'custom'];
 
 let protect = process.argv.indexOf('--protect') !== -1 ? '#!REQUIRE-PROTECTED\n' : '';
 let data;
-let i, j, k;
+let i, j, k, l;
 let now;
 let config;
 
 let _files;
 let _subProxies;
 let _rules;
+let _urlRewrite;
 
 fs.stat('./proxies.custom.js', function(err, stats) {
   if(!err) {
@@ -28,9 +29,11 @@ fs.stat('./proxies.custom.js', function(err, stats) {
 
   fs.access('./rules.custom.js', fs.R_OK, function(err) {
     if(!err) {
-      _rules = require('./rules.custom.js').rules;
+      _rules      = require('./rules.custom.js').rules;
+      _urlRewrite = require('./rules.custom.js').urlRewrite;
     } else {
-      _rules = require('./rules.js').rules;
+      _rules      = require('./rules.js').rules;
+      _urlRewrite = require('./rules.js').urlRewrite;
     }
 
     fs.mkdir('build/', () => {
@@ -105,6 +108,15 @@ function generatorConfigs() {
     for (j=0; j<_subProxies.length; j++) {
       data += stringifyProxy(_subProxies[j]);
       data += '\n';
+    }
+
+    data += '\n';
+    data += '[URL Rewrite]';
+    data += '\n';
+
+    for (l=0; l<_urlRewrite.length; l++) {
+      data += _urlRewrite[l];
+        data += '\n';
     }
 
     data += '\n';

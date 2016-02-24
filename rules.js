@@ -1,4 +1,8 @@
 module.exports = {
+  urlRewrite: [
+    '^http://www.google.cn http://www.google.com',
+    '^https://www.google.cn https://www.google.com'
+  ],
   /*
    * Rule
    * [type](string) if the value == 'directt', rules in its section will be omitted for Global config
@@ -104,10 +108,12 @@ module.exports = {
         'DOMAIN-SUFFIX,miwifi.com,DIRECT',
         'DOMAIN-SUFFIX,netease.com,DIRECT',
         'DOMAIN-SUFFIX,nuomi.com,DIRECT',
+        'DOMAIN-SUFFIX,ousns.net,DIRECT',
         'DOMAIN-SUFFIX,pptv.com,DIRECT',
         'DOMAIN-SUFFIX,qhimg.com,DIRECT',
         'DOMAIN-SUFFIX,qq.com,DIRECT',
         'DOMAIN-SUFFIX,qunar.com,DIRECT',
+        'DOMAIN-SUFFIX,sina.cn,DIRECT',
         'DOMAIN-SUFFIX,sina.com,DIRECT',
         'DOMAIN-SUFFIX,sina.com.cn,DIRECT',
         'DOMAIN-SUFFIX,sinaimg.cn,DIRECT',
@@ -119,8 +125,10 @@ module.exports = {
         'DOMAIN-SUFFIX,t.cn,DIRECT',
         'DOMAIN-SUFFIX,tanx.com,DIRECT',
         'DOMAIN-SUFFIX,taobao.com,DIRECT',
+        'DOMAIN-SUFFIX,tiantian.tv,DIRECT',
         'DOMAIN-SUFFIX,tmall.com,DIRECT',
         'DOMAIN-SUFFIX,tudou.com,DIRECT',
+        'DOMAIN-SUFFIX,tvesou.com,DIRECT',
         'DOMAIN-SUFFIX,weibo.com,DIRECT',
         'DOMAIN-SUFFIX,weixin.com,DIRECT',
         'DOMAIN-SUFFIX,youku.com,DIRECT',
@@ -146,7 +154,7 @@ module.exports = {
         '# DOMAIN-SUFFIX,adcdownload.apple.com,DIRECT',
         '# DOMAIN-SUFFIX,swcdn.apple.com,DIRECT',
         '# DOMAIN-SUFFIX,phobos.apple.com,DIRECT',
-        'DOMAIN-SUFFIX,apple.com,DEFAULT',
+        //'DOMAIN-SUFFIX,apple.com,DEFAULT',
         'DOMAIN-SUFFIX,aaplimg.com,DEFAULT',
         'DOMAIN-SUFFIX,cdn-apple.com,DEFAULT',
         'DOMAIN-SUFFIX,icloud.com,DEFAULT',
