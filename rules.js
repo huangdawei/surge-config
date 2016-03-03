@@ -155,6 +155,7 @@ module.exports = {
         '# DOMAIN-SUFFIX,swcdn.apple.com,DIRECT',
         '# DOMAIN-SUFFIX,phobos.apple.com,DIRECT',
         //'DOMAIN-SUFFIX,apple.com,DEFAULT',
+        'DOMAIN-SUFFIX,itunes.apple.com,DEFAULT',
         'DOMAIN-SUFFIX,aaplimg.com,DEFAULT',
         'DOMAIN-SUFFIX,cdn-apple.com,DEFAULT',
         'DOMAIN-SUFFIX,icloud.com,DEFAULT',

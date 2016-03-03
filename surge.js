@@ -61,10 +61,9 @@ function generatorConfigs() {
     data += config.loglevel ? config.loglevel : 'notify';
     data += '\n';
 
-    if (config.bypassSystem === false) {
-      data += 'bypass-system=false';
-      data += '\n';
-    }
+    data += 'bypass-system=';
+    data += (config.bypassSystem === false ? 'false' : 'true');
+    data += '\n';
 
     if (config.skipProxy && config.skipProxy.length) {
       data += 'skip-proxy=';
